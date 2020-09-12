@@ -1,0 +1,17 @@
+if page.posts.length > 0
+    each post in page.posts.sort('date', -1).limit(10).toArray()
+      li.recent-post-item
+        h1
+          a(href=url_for(post.path))= post.title
+        div.post-content!= post.excerpt
+        br
+        if post.date
+          time(datetime=post.date.toJSON())= date(post.date, date_format)
+        a.read(href=url_for(post.path))!= __('more')
+      div.page
+        if page.prev||page.prev_link
+          a.prev(href=url_for(page.prev_link))
+            span!= __('prev')
+        if page.next_link||page.next_link
+          a.next(href=url_for(page.next_link))
+            span!= __('next')

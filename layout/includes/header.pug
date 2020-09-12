@@ -1,0 +1,5 @@
+header.cl
+  ul.nav
+    each link, name in (config.menu ||theme.menu)
+      li.nav-link
+        a.active(href=link)= __(name)

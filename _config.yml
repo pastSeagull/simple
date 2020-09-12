@@ -1,0 +1,17 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/simple.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/simple.js
